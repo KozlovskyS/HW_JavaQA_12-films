@@ -114,16 +114,4 @@ class FilmsManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void testLast3FilmsWithLimitNegative() {
-        FilmsManager manager = new FilmsManager(-2);
-
-        manager.add("Movie 1");
-        manager.add("Movie 2");
-        manager.add("Movie 3");
-
-        String[] expected = {"Movie 3", "Movie 2", "Movie 1"};
-        String[] actual = manager.findLast();
-        Assertions.assertArrayEquals(expected, actual);
-    }
 }

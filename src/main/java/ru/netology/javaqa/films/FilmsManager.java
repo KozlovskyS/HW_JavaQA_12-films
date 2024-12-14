@@ -9,13 +9,8 @@ public class FilmsManager {
     }
 
     public FilmsManager(int limitViewCount) {
-        if (limitViewCount > 0) {
-            this.limitViewCount = limitViewCount;
-        }else{
-            this.limitViewCount = 5;
-        }
+        this.limitViewCount = limitViewCount;
     }
-
 
     public void add(String film) {
         String[] tmp = new String[films.length + 1];
@@ -30,7 +25,6 @@ public class FilmsManager {
         return films;
     }
 
-
     public String[] findLast() {
         int resultLenght;
         if (films.length < limitViewCount) {
@@ -44,5 +38,4 @@ public class FilmsManager {
         }
         return last;
     }
-
 }
